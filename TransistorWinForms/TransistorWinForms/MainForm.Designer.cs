@@ -44,9 +44,9 @@
             mSizeTextBox = new TextBox();
             SaveAsBtn = new Button();
             iniLoadBtn = new Button();
-            setDefaultBtn = new Button();
             colorLineCB = new ComboBox();
             fillColorCB = new ComboBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)mainPictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -195,22 +195,12 @@
             // 
             // iniLoadBtn
             // 
-            iniLoadBtn.Location = new Point(12, 387);
+            iniLoadBtn.Location = new Point(12, 335);
             iniLoadBtn.Name = "iniLoadBtn";
-            iniLoadBtn.Size = new Size(282, 39);
+            iniLoadBtn.Size = new Size(282, 35);
             iniLoadBtn.TabIndex = 17;
-            iniLoadBtn.Text = "Загрузить состояние";
+            iniLoadBtn.Text = "Подгрузить состояние";
             iniLoadBtn.UseVisualStyleBackColor = true;
-            // 
-            // setDefaultBtn
-            // 
-            setDefaultBtn.Location = new Point(12, 335);
-            setDefaultBtn.Name = "setDefaultBtn";
-            setDefaultBtn.Size = new Size(282, 36);
-            setDefaultBtn.TabIndex = 18;
-            setDefaultBtn.Text = "Установить default значения";
-            setDefaultBtn.UseVisualStyleBackColor = true;
-            setDefaultBtn.Click += setDefaultBtn_Click;
             // 
             // colorLineCB
             // 
@@ -230,14 +220,23 @@
             fillColorCB.TabIndex = 20;
             fillColorCB.SelectedIndexChanged += fillColorCB_SelectedIndexChanged;
             // 
+            // button1
+            // 
+            button1.Location = new Point(12, 387);
+            button1.Name = "button1";
+            button1.Size = new Size(282, 32);
+            button1.TabIndex = 21;
+            button1.Text = "Откатить до default";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1275, 624);
+            Controls.Add(button1);
             Controls.Add(fillColorCB);
             Controls.Add(colorLineCB);
-            Controls.Add(setDefaultBtn);
             Controls.Add(iniLoadBtn);
             Controls.Add(SaveAsBtn);
             Controls.Add(mSizeTextBox);
@@ -256,12 +255,12 @@
             Controls.Add(mainPictureBox);
             Name = "MainForm";
             Text = "Курсовая C#";
+            FormClosed += MainForm_FormClosed;
             Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)mainPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
-
         #endregion
 
         public PictureBox mainPictureBox;
@@ -280,8 +279,8 @@
         public TextBox mSizeTextBox;
         public Button SaveAsBtn;
         public Button iniLoadBtn;
-        public Button setDefaultBtn;
         public ComboBox colorLineCB;
         public ComboBox fillColorCB;
+        public Button button1;
     }
 }

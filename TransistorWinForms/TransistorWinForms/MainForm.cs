@@ -1,3 +1,5 @@
+using System.Drawing.Imaging;
+using TransistorWinForms.Data;
 using TransistorWinForms.Workers;
 
 namespace TransistorWinForms
@@ -7,6 +9,9 @@ namespace TransistorWinForms
         public FormWorker FormWorker { get; private set; }
         public StateWorker StateWorker { get; private set; }
 
+        /// <summary>
+        /// Тут получим состояние проги (бывшее или default)
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
@@ -16,13 +21,24 @@ namespace TransistorWinForms
         }
 
         /// <summary>
-        /// Загрузка формы
+        /// При загрузке формы инициализируем значения в controls
         /// </summary>
         private void MainForm_Load(object sender, EventArgs e)
-        {
-            FormWorker.FillControls();
-            FormWorker.Draw();
-        }
+            => FormWorker.FillControls();
+
+        /// <summary>
+        /// Очистка ресурсов при закрытии формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+            => FormWorker.Dispose();
+
+        /// <summary>
+        /// Переопределяем OnPain, чтобы лучше контролировать отрисовку
+        /// </summary>
+        protected override void OnPaint(PaintEventArgs e)
+            => FormWorker.Draw();
 
         private void setDefaultBtn_Click(object sender, EventArgs e)
         {
@@ -42,28 +58,24 @@ namespace TransistorWinForms
         {
             using SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-            // Установка возможных форматов (rtf, txt, ini, можете добавить свои)
-            saveFileDialog.Filter = "BMP Files (*.bmp)|*.bmp|PNG Files (*.png)|*.png|INI Files (*.ini)|*.ini";
+            // Установка возможных форматов
+            saveFileDialog.Filter = string.Join('|', 
+                Constants.ImageFileExtensions.Select(x => $"{x.Key.ToUpper()} Files (*.{x.Key})|*.{x.Key}"));
+
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string fileName = saveFileDialog.FileName;
-                string fileExtension = Path.GetExtension(fileName).ToLower();
+                string fileExtension = Path.GetExtension(fileName).ToLower().Replace(".", string.Empty);
 
                 // Обработка расширений
-                if (fileExtension == ".bmp")
+                if (fileExtension == "ini")
                 {
-                    // Сохранение в формате RTF
-                    //richTextBox1.SaveFile(fileName, RichTextBoxStreamType.RichText);
+                    // Тут еще делать save
                 }
-                else if (fileExtension == ".png")
+                else
                 {
-                    // Сохранение в формате TXT
-                    //richTextBox1.SaveFile(fileName, RichTextBoxStreamType.PlainText);
-                }
-                else if (fileExtension == ".ini")
-                {
-                    // Сохранение в формате INI
-                    // ...
+                    var bmp = FormWorker.GetImage();
+                    bmp.Save(saveFileDialog.FileName, Constants.ImageFileExtensions[fileExtension]);
                 }
             }
         }
