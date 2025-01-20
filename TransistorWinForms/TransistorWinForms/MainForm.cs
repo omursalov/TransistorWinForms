@@ -1,4 +1,3 @@
-using System.Windows.Forms;
 using TransistorWinForms.Workers;
 
 namespace TransistorWinForms
@@ -21,7 +20,7 @@ namespace TransistorWinForms
         /// </summary>
         private void MainForm_Load(object sender, EventArgs e)
         {
-            FormWorker.SetValues();
+            FormWorker.FillControls();
             FormWorker.Draw();
         }
 
@@ -29,6 +28,12 @@ namespace TransistorWinForms
         {
 
         }
+
+        /// <summary>
+        /// Вводим в textBoxes только цифры
+        /// </summary>
+        private void textBox_KeyPressOnlyDigits(object sender, KeyPressEventArgs e)
+            => e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
 
         /// <summary>
         /// Сохранение файла (либо картинка, либо состояние)

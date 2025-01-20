@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TransistorWinForms.Models;
+﻿using TransistorWinForms.Models;
 
 namespace TransistorWinForms.Workers
 {
@@ -11,7 +6,7 @@ namespace TransistorWinForms.Workers
     {
         private MainForm mainForm;
 
-        private IDictionary<string, Color> colors;
+        private IDictionary<string, Color> colors = Data.Constants.Colors;
 
         private StateModel stateModel;
 
@@ -26,27 +21,28 @@ namespace TransistorWinForms.Workers
         /// <summary>
         /// Установить значения в контролы формы
         /// </summary>
-        public void SetValues()
+        public void FillControls()
         {
             // Разбираемся с элементами в выпадающих списках
-            /*colorLineCB->Items->Clear();
-            for (int i = 0; i < colorTexts->Length; i++)
-                colorLineCB->Items->Add(colorTexts[i]);
+            mainForm.colorLineCB.Items.Clear();
+            mainForm.fillColorCB.Items.Clear();
 
-            fillColorCB->Items->Clear();
-            for (int i = 0; i < colorTexts->Length; i++)
-                fillColorCB->Items->Add(colorTexts[i]);
+            foreach (var color in colors)
+            {
+                mainForm.colorLineCB.Items.Add(color.Key);
+                mainForm.fillColorCB.Items.Add(color.Key);
+            }
 
             // Подставляем значения по умолчанию
-            mainForm.colorLineCB->Text = colorLine;
-            mainForm.fillColorCB->Text = fillColor;
+            mainForm.colorLineCB.Text = stateModel.ColorLine;
+            mainForm.fillColorCB.Text = stateModel.FillColor;
 
-            if (transitionType->Contains("n"))
-                transitionType1->Checked = true;
-            else if (transitionType->Contains("p"))
-                transitionType2->Checked = true;
+            if (stateModel.TransitionType.Contains("n"))
+                mainForm.transitionType1.Checked = true;
+            else if (stateModel.TransitionType.Contains("p"))
+                mainForm.transitionType1.Checked = true;
             else
-                throw new Exception("Неизвестный тип канала");*/
+                throw new Exception("Неизвестный тип канала");
 
             mainForm.circleCheckBox.Checked = stateModel.Circle;
             mainForm.cxTextBox.Text = stateModel.Cx.ToString();
@@ -73,7 +69,7 @@ namespace TransistorWinForms.Workers
                 return false;
             }
 
-            if (int.TryParse(textBox.Text, out value))
+            if (!int.TryParse(textBox.Text, out value))
             {
                 //MessageBox::Show("Вводите только цифры в TextBox");
                 return false;

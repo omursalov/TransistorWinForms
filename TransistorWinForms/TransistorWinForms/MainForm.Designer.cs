@@ -45,6 +45,8 @@
             SaveAsBtn = new Button();
             iniLoadBtn = new Button();
             setDefaultBtn = new Button();
+            colorLineCB = new ComboBox();
+            fillColorCB = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)mainPictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -130,6 +132,7 @@
             cxTextBox.Name = "cxTextBox";
             cxTextBox.Size = new Size(96, 27);
             cxTextBox.TabIndex = 8;
+            cxTextBox.KeyPress += textBox_KeyPressOnlyDigits;
             // 
             // cyTextBox
             // 
@@ -137,6 +140,7 @@
             cyTextBox.Name = "cyTextBox";
             cyTextBox.Size = new Size(94, 27);
             cyTextBox.TabIndex = 9;
+            cyTextBox.KeyPress += textBox_KeyPressOnlyDigits;
             // 
             // label5
             // 
@@ -153,6 +157,7 @@
             widthTextBox.Name = "widthTextBox";
             widthTextBox.Size = new Size(75, 27);
             widthTextBox.TabIndex = 11;
+            widthTextBox.KeyPress += textBox_KeyPressOnlyDigits;
             // 
             // label6
             // 
@@ -169,6 +174,7 @@
             mSizeTextBox.Name = "mSizeTextBox";
             mSizeTextBox.Size = new Size(75, 27);
             mSizeTextBox.TabIndex = 13;
+            mSizeTextBox.KeyPress += textBox_KeyPressOnlyDigits;
             // 
             // SaveAsBtn
             // 
@@ -199,11 +205,29 @@
             setDefaultBtn.UseVisualStyleBackColor = true;
             setDefaultBtn.Click += setDefaultBtn_Click;
             // 
+            // colorLineCB
+            // 
+            colorLineCB.FormattingEnabled = true;
+            colorLineCB.Location = new Point(12, 37);
+            colorLineCB.Name = "colorLineCB";
+            colorLineCB.Size = new Size(163, 28);
+            colorLineCB.TabIndex = 19;
+            // 
+            // fillColorCB
+            // 
+            fillColorCB.FormattingEnabled = true;
+            fillColorCB.Location = new Point(12, 95);
+            fillColorCB.Name = "fillColorCB";
+            fillColorCB.Size = new Size(163, 28);
+            fillColorCB.TabIndex = 20;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1275, 632);
+            Controls.Add(fillColorCB);
+            Controls.Add(colorLineCB);
             Controls.Add(setDefaultBtn);
             Controls.Add(iniLoadBtn);
             Controls.Add(SaveAsBtn);
@@ -247,6 +271,8 @@
         public TextBox mSizeTextBox;
         public Button SaveAsBtn;
         public Button iniLoadBtn;
-        private Button setDefaultBtn;
+        public Button setDefaultBtn;
+        public ComboBox colorLineCB;
+        public ComboBox fillColorCB;
     }
 }

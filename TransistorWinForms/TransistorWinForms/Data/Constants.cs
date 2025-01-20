@@ -15,7 +15,11 @@
 
         public static IDictionary<string, Color> Colors = new Dictionary<string, Color>
         {
-            { "черный", Color.Black }
+            { "черный", Color.Black },
+            { "белый", Color.White },
+            { "зеленый", Color.Green },
+            { "красный", Color.Red },
+            { "синий", Color.Blue }
         };
     }
 }
