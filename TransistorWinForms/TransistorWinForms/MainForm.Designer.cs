@@ -1,6 +1,6 @@
 ﻿namespace TransistorWinForms
 {
-    partial class MainForm
+    public partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -46,6 +46,7 @@
             SaveAsBtn = new Button();
             iniSaveBtn = new Button();
             iniLoadBtn = new Button();
+            setDefaultBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)mainPictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -207,11 +208,22 @@
             iniLoadBtn.Text = "Подгрузить INI";
             iniLoadBtn.UseVisualStyleBackColor = true;
             // 
+            // setDefaultBtn
+            // 
+            setDefaultBtn.Location = new Point(12, 335);
+            setDefaultBtn.Name = "setDefaultBtn";
+            setDefaultBtn.Size = new Size(197, 36);
+            setDefaultBtn.TabIndex = 18;
+            setDefaultBtn.Text = "Значения по умолчанию";
+            setDefaultBtn.UseVisualStyleBackColor = true;
+            setDefaultBtn.Click += setDefaultBtn_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1275, 632);
+            Controls.Add(setDefaultBtn);
             Controls.Add(iniLoadBtn);
             Controls.Add(iniSaveBtn);
             Controls.Add(SaveAsBtn);
@@ -232,6 +244,7 @@
             Controls.Add(mainPictureBox);
             Name = "MainForm";
             Text = "Курсовая C#";
+            Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)mainPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -239,23 +252,24 @@
 
         #endregion
 
-        private PictureBox mainPictureBox;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private RadioButton transitionType1;
-        private RadioButton transitionType2;
-        private CheckBox circleCheckBox;
-        private Label label4;
-        private TextBox cxTextBox;
-        private TextBox cyTextBox;
-        private Label label5;
-        private TextBox widthTextBox;
-        private Label label6;
-        private TextBox mSizeTextBox;
-        private Button bmpSaveBtn;
-        private Button SaveAsBtn;
-        private Button iniSaveBtn;
-        private Button iniLoadBtn;
+        public PictureBox mainPictureBox;
+        public Label label1;
+        public Label label2;
+        public Label label3;
+        public RadioButton transitionType1;
+        public RadioButton transitionType2;
+        public CheckBox circleCheckBox;
+        public Label label4;
+        public TextBox cxTextBox;
+        public TextBox cyTextBox;
+        public Label label5;
+        public TextBox widthTextBox;
+        public Label label6;
+        public TextBox mSizeTextBox;
+        public Button bmpSaveBtn;
+        public Button SaveAsBtn;
+        public Button iniSaveBtn;
+        public Button iniLoadBtn;
+        private Button setDefaultBtn;
     }
 }
