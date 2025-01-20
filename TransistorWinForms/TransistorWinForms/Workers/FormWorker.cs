@@ -1,4 +1,6 @@
-﻿using TransistorWinForms.Models;
+﻿using System.Reflection;
+using TransistorWinForms.Data;
+using TransistorWinForms.Models;
 
 namespace TransistorWinForms.Workers
 {
@@ -10,6 +12,9 @@ namespace TransistorWinForms.Workers
 
         private StateModel stateModel;
 
+        /// <summary>
+        /// IMPORTANT
+        /// </summary>
         private bool initFlag = false;
 
         public FormWorker(MainForm mainForm, StateModel stateModel)
@@ -84,15 +89,12 @@ namespace TransistorWinForms.Workers
             return true;
         }
 
-        // Тут еще разбираться.. Забыл, как ресурсы пушить в код
-        private void displayError()
-        {
-            using (var g = mainForm.mainPictureBox.CreateGraphics())
-            {
-                //fillColorText = fillColorCB->Text;
-                //g.Clear(getColorByText(fillColorText));
-            }
-        }
+        /// <summary>
+        /// Отрисуем для понятности..
+        /// </summary>
+        private void DrawTemp()
+            => mainForm.mainPictureBox.Image
+                = new Bitmap(Assembly.GetExecutingAssembly().GetManifestResourceStream(Constants.TEMP_DRAW_RESOURCE_NAME));
 
         /// <summary>
         /// Нарисовать картинку
@@ -109,7 +111,7 @@ namespace TransistorWinForms.Workers
                 || !checkIntTextBoxValue(mainForm.widthTextBox)
                 || !checkIntTextBoxValue(mainForm.mSizeTextBox))
             {
-                displayError();
+                DrawTemp();
                 return;
             }
 
@@ -122,35 +124,35 @@ namespace TransistorWinForms.Workers
             // Цвет заливки
             using (var g = mainForm.mainPictureBox.CreateGraphics())
             {
-                /*String ^ fillColorText = mainForm.fillColorCB.Text;
-                g.Clear(getColorByText(fillColorText));
+                var fillColorText = mainForm.fillColorCB.Text;
+                g.Clear(colors[fillColorText]);
 
                 // Ручка: цвет и толщина
-                String ^ colorLineText = colorLineCB->Text;
-                Pen ^ pp = gcnew Pen(getBrushByText(colorLineText), Int32::Parse(widthTextBox->Text));
+                var colorLineText = mainForm.colorLineCB.Text;
+                var pp = new Pen(colors[colorLineText], int.Parse(mainForm.widthTextBox.Text));
 
                 //Отрисовка первого транзистора
-                g->DrawLine(pp, 326, 314, 356, 314); // Центральная линия стрелки
+                g.DrawLine(pp, 326, 314, 356, 314); // Центральная линия стрелки
 
                 // Тут еще разбираться.. Стрелка поворот ее
-                if (transitionType1->Checked)
+                if (mainForm.transitionType1.Checked)
                 {
-                    g->DrawLine(pp, 326, 314, 326 + (M / 4), 301 + (M / 4)); // Наклонная вверх стрелка
-                    g->DrawLine(pp, 326, 314, 326 + (M / 4), 327 - (M / 4)); // Наклонная вниз стрелка
+                    g.DrawLine(pp, 326, 314, 326 + (M / 4), 301 + (M / 4)); // Наклонная вверх стрелка
+                    g.DrawLine(pp, 326, 314, 326 + (M / 4), 327 - (M / 4)); // Наклонная вниз стрелка
                 }
 
-                g->DrawLine(pp, 356, 314, 356, 355); // Вертикальная правая линия
-                g->DrawLine(pp, 326, 355, 400, 355); // Верхняя линия
-                g->DrawLine(pp, 326, 273, 400, 273); // Нижняя линия
-                g->DrawLine(pp, 310, 355, 250, 355); // Нижняя левая линия
-                g->DrawLine(pp, 310, 273, 310, 355); // Вертикальная левая лииния
-                g->DrawLine(pp, 326, 324, 326, 304); // Штрих центральный
-                g->DrawLine(pp, 326, 283, 326, 263); // Штрих верхний
-                g->DrawLine(pp, 326, 365, 326, 345); // Штрих нижний
+                g.DrawLine(pp, 356, 314, 356, 355); // Вертикальная правая линия
+                g.DrawLine(pp, 326, 355, 400, 355); // Верхняя линия
+                g.DrawLine(pp, 326, 273, 400, 273); // Нижняя линия
+                g.DrawLine(pp, 310, 355, 250, 355); // Нижняя левая линия
+                g.DrawLine(pp, 310, 273, 310, 355); // Вертикальная левая лииния
+                g.DrawLine(pp, 326, 324, 326, 304); // Штрих центральный
+                g.DrawLine(pp, 326, 283, 326, 263); // Штрих верхний
+                g.DrawLine(pp, 326, 365, 326, 345); // Штрих нижний
 
                 // Нужно круг рисовать?
                 if (mainForm.circleCheckBox.Checked)
-                    g->DrawEllipse(pp, 256, 244, M * 2, M * 2); // Отрисовка круга*/
+                    g.DrawEllipse(pp, 256, 244, M * 2, M * 2); // Отрисовка круга*/
             }
         }
     }

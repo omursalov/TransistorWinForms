@@ -67,5 +67,17 @@ namespace TransistorWinForms
                 }
             }
         }
+
+        #region Перерисовка
+        private void colorLineCB_SelectedIndexChanged(object sender, EventArgs e) => FormWorker.Draw();
+        private void fillColorCB_SelectedIndexChanged(object sender, EventArgs e) => FormWorker.Draw();
+        private void transitionType1_CheckedChanged(object sender, EventArgs e) => FormWorker.Draw();
+        private void transitionType2_CheckedChanged(object sender, EventArgs e) => FormWorker.Draw();
+        private void circleCheckBox_CheckedChanged(object sender, EventArgs e) => FormWorker.Draw();
+        private void cxTextBox_TextChanged(object sender, EventArgs e) => FormWorker.Draw();
+        private void cyTextBox_TextChanged(object sender, EventArgs e) => FormWorker.Draw();
+        private void widthTextBox_TextChanged(object sender, EventArgs e) => FormWorker.Draw();
+        private void mSizeTextBox_TextChanged(object sender, EventArgs e) => FormWorker.Draw();
+        #endregion
     }
 }

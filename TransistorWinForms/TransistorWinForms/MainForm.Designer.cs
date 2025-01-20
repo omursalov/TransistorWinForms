@@ -54,7 +54,7 @@
             // 
             mainPictureBox.Location = new Point(468, 12);
             mainPictureBox.Name = "mainPictureBox";
-            mainPictureBox.Size = new Size(795, 608);
+            mainPictureBox.Size = new Size(795, 600);
             mainPictureBox.TabIndex = 0;
             mainPictureBox.TabStop = false;
             // 
@@ -95,6 +95,7 @@
             transitionType1.TabStop = true;
             transitionType1.Text = "n-канальный";
             transitionType1.UseVisualStyleBackColor = true;
+            transitionType1.CheckedChanged += transitionType1_CheckedChanged;
             // 
             // transitionType2
             // 
@@ -106,6 +107,7 @@
             transitionType2.TabStop = true;
             transitionType2.Text = "p-канальный";
             transitionType2.UseVisualStyleBackColor = true;
+            transitionType2.CheckedChanged += transitionType2_CheckedChanged;
             // 
             // circleCheckBox
             // 
@@ -116,6 +118,7 @@
             circleCheckBox.TabIndex = 6;
             circleCheckBox.Text = "окружность";
             circleCheckBox.UseVisualStyleBackColor = true;
+            circleCheckBox.CheckedChanged += circleCheckBox_CheckedChanged;
             // 
             // label4
             // 
@@ -132,6 +135,7 @@
             cxTextBox.Name = "cxTextBox";
             cxTextBox.Size = new Size(96, 27);
             cxTextBox.TabIndex = 8;
+            cxTextBox.TextChanged += cxTextBox_TextChanged;
             cxTextBox.KeyPress += textBox_KeyPressOnlyDigits;
             // 
             // cyTextBox
@@ -140,6 +144,7 @@
             cyTextBox.Name = "cyTextBox";
             cyTextBox.Size = new Size(94, 27);
             cyTextBox.TabIndex = 9;
+            cyTextBox.TextChanged += cyTextBox_TextChanged;
             cyTextBox.KeyPress += textBox_KeyPressOnlyDigits;
             // 
             // label5
@@ -157,6 +162,7 @@
             widthTextBox.Name = "widthTextBox";
             widthTextBox.Size = new Size(75, 27);
             widthTextBox.TabIndex = 11;
+            widthTextBox.TextChanged += widthTextBox_TextChanged;
             widthTextBox.KeyPress += textBox_KeyPressOnlyDigits;
             // 
             // label6
@@ -174,6 +180,7 @@
             mSizeTextBox.Name = "mSizeTextBox";
             mSizeTextBox.Size = new Size(75, 27);
             mSizeTextBox.TabIndex = 13;
+            mSizeTextBox.TextChanged += mSizeTextBox_TextChanged;
             mSizeTextBox.KeyPress += textBox_KeyPressOnlyDigits;
             // 
             // SaveAsBtn
@@ -212,6 +219,7 @@
             colorLineCB.Name = "colorLineCB";
             colorLineCB.Size = new Size(163, 28);
             colorLineCB.TabIndex = 19;
+            colorLineCB.SelectedIndexChanged += colorLineCB_SelectedIndexChanged;
             // 
             // fillColorCB
             // 
@@ -220,12 +228,13 @@
             fillColorCB.Name = "fillColorCB";
             fillColorCB.Size = new Size(163, 28);
             fillColorCB.TabIndex = 20;
+            fillColorCB.SelectedIndexChanged += fillColorCB_SelectedIndexChanged;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1275, 632);
+            ClientSize = new Size(1275, 624);
             Controls.Add(fillColorCB);
             Controls.Add(colorLineCB);
             Controls.Add(setDefaultBtn);
