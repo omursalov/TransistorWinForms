@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\bin\Debug\net8.0-windows\TransistorWinForms.exe
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\bin\Debug\net8.0-windows\TransistorWinForms.deps.json
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\bin\Debug\net8.0-windows\TransistorWinForms.runtimeconfig.json
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\bin\Debug\net8.0-windows\TransistorWinForms.dll
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\bin\Debug\net8.0-windows\TransistorWinForms.pdb
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.MainForm.resources
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.csproj.GenerateResource.cache
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.AssemblyInfo.cs
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.dll
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\refint\TransistorWinForms.dll
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.pdb
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.genruntimeconfig.cache
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\ref\TransistorWinForms.dll
