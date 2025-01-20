@@ -1,26 +1,29 @@
-﻿namespace TransistorWinForms.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TransistorWinForms.Models;
+
+namespace TransistorWinForms.Workers
 {
-    public class FormModel
+    public class FormWorker
     {
         private MainForm mainForm;
 
         private IDictionary<string, Color> colors;
 
-        private string colorLine;
-        private string fillColor;
-        private string transitionType;
-        private bool circle;
-        private int cx;
-        private int cy;
-        private int lineWidth;
-        private int mSize;
+        private StateModel stateModel;
 
         private bool initFlag = false;
 
-        public FormModel(MainForm mainForm)
+        public FormWorker(MainForm mainForm)
             => this.mainForm = mainForm;
 
-        public void SetDefault()
+        /// <summary>
+        /// Установить значения в контролы формы
+        /// </summary>
+        public void SetValues(StateModel state)
         {
             // Разбираемся с элементами в выпадающих списках
             /*colorLineCB->Items->Clear();
@@ -92,6 +95,9 @@
             }
         }
 
+        /// <summary>
+        /// Нарисовать картинку
+        /// </summary>
         public void Draw()
         {
             // Надо точно знать, что все инициализировано

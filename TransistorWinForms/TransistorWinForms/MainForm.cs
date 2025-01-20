@@ -1,19 +1,28 @@
-using TransistorWinForms.Models;
+using TransistorWinForms.Workers;
 
 namespace TransistorWinForms
 {
     public partial class MainForm : Form
     {
-        private FormModel FormModel;
+        public FormWorker FormWorker { get; private set; }
+        public StateWorker StateWorker { get; private set; }
 
         public MainForm()
         {
             InitializeComponent();
-            FormModel = new FormModel(this);
+            FormWorker = new FormWorker(this);
+            StateWorker = new StateWorker();
         }
 
-        private void MainForm_Load(object sender, EventArgs e) => FormModel.SetDefault();
+        /// <summary>
+        /// Загрузка формы
+        /// </summary>
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            FormWorker.SetValues(StateWorker.Get());
+            FormWorker.Draw();
+        }
 
-        private void setDefaultBtn_Click(object sender, EventArgs e) => FormModel.SetDefault();
+        private void setDefaultBtn_Click(object sender, EventArgs e) => FormWorker.SetValues();
     }
 }
