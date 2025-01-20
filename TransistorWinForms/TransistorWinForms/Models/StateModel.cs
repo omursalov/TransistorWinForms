@@ -1,19 +1,35 @@
-﻿namespace TransistorWinForms.Models
+﻿using TransistorWinForms.Data;
+
+namespace TransistorWinForms.Models
 {
     public class StateModel
     {
-        private string ColorLine { get; set; }
-        private string FillColor { get; set; }
-        private string TransitionType { get; set; }
-        private bool Circle { get; set; }
-        private int Cx { get; set; }
-        private int Cy { get; set; }
-        private int LineWidth { get; set; }
-        private int MSize { get; set; }
+        public string ColorLine { get; private set; }
+        public string FillColor { get; private set; }
+        public string TransitionType { get; private set; }
+        public bool Circle { get; private set; }
+        public int Cx { get; private set; }
+        public int Cy { get; private set; }
+        public int LineWidth { get; private set; }
+        public int MSize { get; private set; }
 
         public StateModel(string value)
         {
+            if (string.IsNullOrEmpty(value))
+            {
+                ColorLine = Constants.ColorLine;
+                FillColor = Constants.FillColor;
+                TransitionType = Constants.TransitionType;
+                Circle = Constants.Circle;
+                Cx = Constants.Cx;
+                Cy = Constants.Cy;
+                LineWidth = Constants.LineWidth;
+                MSize = Constants.MSize;
+            }
+            else
+            {
 
+            }
         }
     }
 }

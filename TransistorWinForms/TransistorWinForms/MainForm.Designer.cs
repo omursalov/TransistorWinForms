@@ -42,9 +42,7 @@
             widthTextBox = new TextBox();
             label6 = new Label();
             mSizeTextBox = new TextBox();
-            bmpSaveBtn = new Button();
             SaveAsBtn = new Button();
-            iniSaveBtn = new Button();
             iniLoadBtn = new Button();
             setDefaultBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)mainPictureBox).BeginInit();
@@ -172,49 +170,32 @@
             mSizeTextBox.Size = new Size(75, 27);
             mSizeTextBox.TabIndex = 13;
             // 
-            // bmpSaveBtn
-            // 
-            bmpSaveBtn.Location = new Point(12, 265);
-            bmpSaveBtn.Name = "bmpSaveBtn";
-            bmpSaveBtn.Size = new Size(197, 29);
-            bmpSaveBtn.TabIndex = 14;
-            bmpSaveBtn.Text = "Сохранить BMP";
-            bmpSaveBtn.UseVisualStyleBackColor = true;
-            // 
             // SaveAsBtn
             // 
-            SaveAsBtn.Location = new Point(12, 300);
+            SaveAsBtn.Location = new Point(12, 289);
             SaveAsBtn.Name = "SaveAsBtn";
-            SaveAsBtn.Size = new Size(197, 29);
+            SaveAsBtn.Size = new Size(282, 29);
             SaveAsBtn.TabIndex = 15;
             SaveAsBtn.Text = "Сохранить как";
             SaveAsBtn.UseVisualStyleBackColor = true;
-            // 
-            // iniSaveBtn
-            // 
-            iniSaveBtn.Location = new Point(12, 387);
-            iniSaveBtn.Name = "iniSaveBtn";
-            iniSaveBtn.Size = new Size(197, 29);
-            iniSaveBtn.TabIndex = 16;
-            iniSaveBtn.Text = "Сохранить INI";
-            iniSaveBtn.UseVisualStyleBackColor = true;
+            SaveAsBtn.Click += SaveAsBtn_Click;
             // 
             // iniLoadBtn
             // 
-            iniLoadBtn.Location = new Point(12, 422);
+            iniLoadBtn.Location = new Point(12, 387);
             iniLoadBtn.Name = "iniLoadBtn";
-            iniLoadBtn.Size = new Size(197, 29);
+            iniLoadBtn.Size = new Size(282, 39);
             iniLoadBtn.TabIndex = 17;
-            iniLoadBtn.Text = "Подгрузить INI";
+            iniLoadBtn.Text = "Загрузить состояние";
             iniLoadBtn.UseVisualStyleBackColor = true;
             // 
             // setDefaultBtn
             // 
             setDefaultBtn.Location = new Point(12, 335);
             setDefaultBtn.Name = "setDefaultBtn";
-            setDefaultBtn.Size = new Size(197, 36);
+            setDefaultBtn.Size = new Size(282, 36);
             setDefaultBtn.TabIndex = 18;
-            setDefaultBtn.Text = "Значения по умолчанию";
+            setDefaultBtn.Text = "Установить default значения";
             setDefaultBtn.UseVisualStyleBackColor = true;
             setDefaultBtn.Click += setDefaultBtn_Click;
             // 
@@ -225,9 +206,7 @@
             ClientSize = new Size(1275, 632);
             Controls.Add(setDefaultBtn);
             Controls.Add(iniLoadBtn);
-            Controls.Add(iniSaveBtn);
             Controls.Add(SaveAsBtn);
-            Controls.Add(bmpSaveBtn);
             Controls.Add(mSizeTextBox);
             Controls.Add(label6);
             Controls.Add(widthTextBox);
@@ -266,9 +245,7 @@
         public TextBox widthTextBox;
         public Label label6;
         public TextBox mSizeTextBox;
-        public Button bmpSaveBtn;
         public Button SaveAsBtn;
-        public Button iniSaveBtn;
         public Button iniLoadBtn;
         private Button setDefaultBtn;
     }

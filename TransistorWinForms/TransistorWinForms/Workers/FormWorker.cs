@@ -17,13 +17,16 @@ namespace TransistorWinForms.Workers
 
         private bool initFlag = false;
 
-        public FormWorker(MainForm mainForm)
-            => this.mainForm = mainForm;
+        public FormWorker(MainForm mainForm, StateModel stateModel)
+        {
+            this.mainForm = mainForm;
+            this.stateModel = stateModel;
+        }
 
         /// <summary>
         /// Установить значения в контролы формы
         /// </summary>
-        public void SetValues(StateModel state)
+        public void SetValues()
         {
             // Разбираемся с элементами в выпадающих списках
             /*colorLineCB->Items->Clear();
@@ -45,12 +48,12 @@ namespace TransistorWinForms.Workers
             else
                 throw new Exception("Неизвестный тип канала");*/
 
-            mainForm.circleCheckBox.Checked = circle;
-            mainForm.cxTextBox.Text = cx.ToString();
-            mainForm.cyTextBox.Text = cy.ToString();
+            mainForm.circleCheckBox.Checked = stateModel.Circle;
+            mainForm.cxTextBox.Text = stateModel.Cx.ToString();
+            mainForm.cyTextBox.Text = stateModel.Cy.ToString();
 
-            mainForm.widthTextBox.Text = lineWidth.ToString();
-            mainForm.mSizeTextBox.Text = mSize.ToString();
+            mainForm.widthTextBox.Text = stateModel.LineWidth.ToString();
+            mainForm.mSizeTextBox.Text = stateModel.MSize.ToString();
 
             initFlag = true;
         }
