@@ -86,25 +86,25 @@ namespace TransistorWinForms
 
         private void cxTextBox_TextChanged(object sender, EventArgs e)
         {
-            IntTextBoxValidator.ProcessLimit((TextBox)sender, e);
+            IntTextBoxValidator.TextChangedCheck((TextBox)sender, e);
             FormWorker.Draw();
         }
 
         private void cyTextBox_TextChanged(object sender, EventArgs e)
         {
-            IntTextBoxValidator.ProcessLimit((TextBox)sender, e);
+            IntTextBoxValidator.TextChangedCheck((TextBox)sender, e);
             FormWorker.Draw();
         }
 
         private void widthTextBox_TextChanged(object sender, EventArgs e)
         {
-            IntTextBoxValidator.ProcessLimit((TextBox)sender, e);
+            IntTextBoxValidator.TextChangedCheck((TextBox)sender, e);
             FormWorker.Draw();
         }
 
         private void mSizeTextBox_TextChanged(object sender, EventArgs e)
         {
-            IntTextBoxValidator.ProcessLimit((TextBox)sender, e);
+            IntTextBoxValidator.TextChangedCheck((TextBox)sender, e);
             FormWorker.Draw();
         }
         #endregion

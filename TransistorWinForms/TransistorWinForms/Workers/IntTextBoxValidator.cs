@@ -25,16 +25,15 @@ namespace TransistorWinForms.Workers
             => e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
 
         /// <summary>
-        /// Не проверяю в словаре наличие key,
-        /// полагаем, что все настроено уже.. В будущем можно сделать.
-        /// Сюда может зайти 2 раза, поэтому используем _processedFlag.
+        /// Первый 0 не может быть.
+        /// Если вылезли за лимит, - возвращаем назад.
         /// </summary>
-        public void ProcessLimit(TextBox textBox, EventArgs e)
+        public void TextChangedCheck(TextBox textBox, EventArgs e)
         {
             var state = _states
                 .FirstOrDefault(x => x.Name.Equals(textBox.Name, StringComparison.OrdinalIgnoreCase));
 
-            if (state == null || textBox.Text == string.Empty)
+            if (state == null)
                 return;
 
             if (_processedFlag)
@@ -46,9 +45,10 @@ namespace TransistorWinForms.Workers
                 return;
             }
 
-            var value = int.Parse(textBox.Text);
+            ;
 
-            if (value > Constants.IntTextBoxLimits[textBox.Name])
+            if (textBox.Text == "0"
+                || (int.TryParse(textBox.Text, out var value) && value > Constants.IntTextBoxLimits[textBox.Name]))
             {
                 _processedFlag = true;
                 textBox.Text = state.Text;
