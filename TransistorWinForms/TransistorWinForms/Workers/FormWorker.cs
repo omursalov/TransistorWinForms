@@ -20,10 +20,10 @@ namespace TransistorWinForms.Workers
         /// </summary>
         private bool initFlag = false;
 
-        public FormWorker(MainForm mainForm, StateModel stateModel)
+        public FormWorker(MainForm mainForm, StateWorker stateWorker)
         {
             this.mainForm = mainForm;
-            this.stateModel = stateModel;
+            this.stateModel = stateWorker.Get();
             bitmap = new Bitmap(mainForm.mainPictureBox.Width, mainForm.mainPictureBox.Height);
             graphics = Graphics.FromImage(bitmap);
         }

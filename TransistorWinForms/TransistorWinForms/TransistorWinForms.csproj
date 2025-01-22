@@ -10,14 +10,16 @@
 
   <ItemGroup>
     <None Remove="Content\temp.png" />
-    <None Remove="Data\State.ini" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Content\temp.png" />
-    <EmbeddedResource Include="Data\State.ini">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\State.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

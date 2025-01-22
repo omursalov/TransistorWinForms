@@ -36,7 +36,7 @@ namespace TransistorWinForms.Data
             { "синий", Color.Blue }
         };
 
-        public static string STATE_RESOURCE_NAME = "TransistorWinForms.Data.State.ini";
+        public static string STATE_FILE_NAME = "Data\\State.ini";
         public static string TEMP_DRAW_RESOURCE_NAME = "TransistorWinForms.Content.temp.png";
 
         public static IDictionary<string, ImageFormat> ImageFileExtensions =

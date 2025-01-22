@@ -31,3 +31,4 @@ C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\TransistorWinFo
 C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.pdb
 C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\TransistorWinForms.genruntimeconfig.cache
 C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\TransistorWinForms\obj\Debug\net8.0-windows\ref\TransistorWinForms.dll
+C:\Users\user\source\repos\TransistorWinForms\TransistorWinForms\TransistorWinForms\bin\Debug\net8.0-windows\Data\State.ini
