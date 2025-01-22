@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using TransistorWinForms.Data;
-using TransistorWinForms.Models;
 
 namespace TransistorWinForms.Workers
 {
@@ -8,9 +7,9 @@ namespace TransistorWinForms.Workers
     {
         private MainForm mainForm;
 
-        private IDictionary<string, Color> colors = Data.Constants.Colors;
+        private StateWorker stateWorker;
 
-        private StateModel stateModel;
+        private IDictionary<string, Color> colors = Data.Constants.Colors;
 
         private Bitmap bitmap;
         private Graphics graphics;
@@ -23,7 +22,7 @@ namespace TransistorWinForms.Workers
         public FormWorker(MainForm mainForm, StateWorker stateWorker)
         {
             this.mainForm = mainForm;
-            this.stateModel = stateWorker.Get();
+            this.stateWorker = stateWorker;
             bitmap = new Bitmap(mainForm.mainPictureBox.Width, mainForm.mainPictureBox.Height);
             graphics = Graphics.FromImage(bitmap);
         }
@@ -33,6 +32,8 @@ namespace TransistorWinForms.Workers
         /// </summary>
         public void FillControls()
         {
+            var stateModel = stateWorker.Get();
+
             // Разбираемся с элементами в выпадающих списках
             mainForm.colorLineCB.Items.Clear();
             mainForm.fillColorCB.Items.Clear();

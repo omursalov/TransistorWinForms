@@ -205,6 +205,7 @@
             iniLoadBtn.TabIndex = 17;
             iniLoadBtn.Text = "Подгрузить состояние";
             iniLoadBtn.UseVisualStyleBackColor = true;
+            iniLoadBtn.Click += iniLoadBtn_Click;
             // 
             // colorLineCB
             // 

@@ -1,5 +1,4 @@
 using TransistorWinForms.Data;
-using TransistorWinForms.Models;
 using TransistorWinForms.Workers;
 
 namespace TransistorWinForms
@@ -66,6 +65,22 @@ namespace TransistorWinForms
                     var bmp = FormWorker.GetImage();
                     bmp.Save(saveFileDialog.FileName, Constants.ImageFileExtensions[fileExtension]);
                 }
+            }
+        }
+
+        private void iniLoadBtn_Click(object sender, EventArgs e)
+        {
+            using OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Установка возможных форматов
+            openFileDialog.Filter = "INI Files (*.ini)|*.ini";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = openFileDialog.FileName;
+                StateWorker.Update(File.ReadAllText(fileName));
+                FormWorker.FillControls();
+                FormWorker.Draw();
             }
         }
 

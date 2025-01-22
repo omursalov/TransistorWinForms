@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using TransistorWinForms.Data;
+﻿using TransistorWinForms.Data;
 using TransistorWinForms.Models;
 
 namespace TransistorWinForms.Workers
@@ -10,7 +9,8 @@ namespace TransistorWinForms.Workers
     public class StateWorker
     {
         private MainForm mainForm;
-        private StateModel stateModel;
+
+        public StateModel StateModel { get; private set; }
 
         /// <summary>
         /// Получает состояние рисунка.
@@ -22,12 +22,18 @@ namespace TransistorWinForms.Workers
         public StateWorker(MainForm mainForm)
         {
             this.mainForm = mainForm;
-            stateModel = new StateModel(File.ReadAllText(Constants.STATE_FILE_NAME));
+            StateModel = new StateModel(File.ReadAllText(Constants.STATE_FILE_NAME));
         }
 
-        public StateModel Get() => stateModel;
+        public StateModel Get() => StateModel;
 
         public string GetIni() => File.ReadAllText(Constants.STATE_FILE_NAME);
+
+        public void Update(string state)
+        {
+            File.WriteAllText(Constants.STATE_FILE_NAME, state);
+            StateModel = new StateModel(state);
+        }
 
         /// <summary>
         /// Это уже когда на форме что-то меняем,
@@ -35,15 +41,18 @@ namespace TransistorWinForms.Workers
         /// </summary>
         public void Update()
         {
-            File.WriteAllText(Constants.STATE_FILE_NAME,
-                $@"ColorLine = {mainForm.colorLineCB.Text}
+            var state = $@"ColorLine = {mainForm.colorLineCB.Text}
 FillColor = {mainForm.fillColorCB.Text}
 TransitionType = {mainForm.GetTransitionType()}
 Circle = {mainForm.circleCheckBox.Checked.ToString().ToLower()}
 Cx = {mainForm.cxTextBox.Text}
 Cy = {mainForm.cyTextBox.Text}
 LineWidth = {mainForm.widthTextBox.Text}
-MSize = {mainForm.mSizeTextBox.Text}");
+MSize = {mainForm.mSizeTextBox.Text}";
+
+            File.WriteAllText(Constants.STATE_FILE_NAME, state);
+
+            StateModel = new StateModel(state);
         }
     }
 }
