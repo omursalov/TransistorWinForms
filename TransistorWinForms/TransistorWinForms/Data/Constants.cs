@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Drawing.Imaging;
+﻿using System.Drawing.Imaging;
 
 namespace TransistorWinForms.Data
 {
@@ -14,6 +13,17 @@ namespace TransistorWinForms.Data
         public static int Cy = 100;
         public static int LineWidth = 3;
         public static int MSize = 100;
+        #endregion
+
+        #region Лимиты по textBoxes
+        public static IDictionary<string, int> IntTextBoxLimits
+            = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase)
+        {
+            { "cxTextBox", 100 },
+            { "cyTextBox", 100 },
+            { "widthTextBox", 5 },
+            { "mSizeTextBox", 100 }
+        };
         #endregion
 
         public static IDictionary<string, Color> Colors =

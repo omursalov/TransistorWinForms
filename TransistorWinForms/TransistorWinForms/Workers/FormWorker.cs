@@ -65,21 +65,11 @@ namespace TransistorWinForms.Workers
         }
 
         /// <summary>
-        /// В textBox только цифры
+        /// В textBox только цифры, еще и лимиты проверяем
         /// </summary>
-        private bool checkIntTextBoxValue(TextBox textBox)
-        {
-            int value;
-
-            if (textBox.Text == string.Empty
-                || !int.TryParse(textBox.Text, out value)
-                || value == 0)
-            {
-                return false;
-            }
-
-            return true;
-        }
+        private bool validateIntTextBox(TextBox textBox)
+            => textBox.Text != string.Empty
+                && int.TryParse(textBox.Text, out int value);
 
         /// <summary>
         /// Отрисуем для понятности..
@@ -98,10 +88,10 @@ namespace TransistorWinForms.Workers
                 return;
 
             // Проверка textBoxes
-            if (!checkIntTextBoxValue(mainForm.cxTextBox)
-                || !checkIntTextBoxValue(mainForm.cyTextBox)
-                || !checkIntTextBoxValue(mainForm.widthTextBox)
-                || !checkIntTextBoxValue(mainForm.mSizeTextBox))
+            if (!validateIntTextBox(mainForm.cxTextBox)
+                || !validateIntTextBox(mainForm.cyTextBox)
+                || !validateIntTextBox(mainForm.widthTextBox)
+                || !validateIntTextBox(mainForm.mSizeTextBox))
             {
                 DrawTemp();
                 return;

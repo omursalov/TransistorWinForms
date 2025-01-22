@@ -8,6 +8,7 @@ namespace TransistorWinForms
     {
         public FormWorker FormWorker { get; private set; }
         public StateWorker StateWorker { get; private set; }
+        public IntTextBoxValidator IntTextBoxValidator { get; private set; }
 
         /// <summary>
         /// Тут получим состояние проги (бывшее или default)
@@ -18,6 +19,7 @@ namespace TransistorWinForms
             StateWorker = new StateWorker();
             var state = StateWorker.Get();
             FormWorker = new FormWorker(this, state);
+            IntTextBoxValidator = new IntTextBoxValidator([cxTextBox, cyTextBox, widthTextBox, mSizeTextBox]);
         }
 
         /// <summary>
@@ -40,16 +42,11 @@ namespace TransistorWinForms
         protected override void OnPaint(PaintEventArgs e)
             => FormWorker.Draw();
 
-        private void setDefaultBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// Вводим в textBoxes только цифры
         /// </summary>
         private void textBox_KeyPressOnlyDigits(object sender, KeyPressEventArgs e)
-            => e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            => IntTextBoxValidator.KeyPressCheck(e);
 
         /// <summary>
         /// Сохранение файла (либо картинка, либо состояние)
@@ -86,10 +83,30 @@ namespace TransistorWinForms
         private void transitionType1_CheckedChanged(object sender, EventArgs e) => FormWorker.Draw();
         private void transitionType2_CheckedChanged(object sender, EventArgs e) => FormWorker.Draw();
         private void circleCheckBox_CheckedChanged(object sender, EventArgs e) => FormWorker.Draw();
-        private void cxTextBox_TextChanged(object sender, EventArgs e) => FormWorker.Draw();
-        private void cyTextBox_TextChanged(object sender, EventArgs e) => FormWorker.Draw();
-        private void widthTextBox_TextChanged(object sender, EventArgs e) => FormWorker.Draw();
-        private void mSizeTextBox_TextChanged(object sender, EventArgs e) => FormWorker.Draw();
+
+        private void cxTextBox_TextChanged(object sender, EventArgs e)
+        {
+            IntTextBoxValidator.ProcessLimit((TextBox)sender, e);
+            FormWorker.Draw();
+        }
+
+        private void cyTextBox_TextChanged(object sender, EventArgs e)
+        {
+            IntTextBoxValidator.ProcessLimit((TextBox)sender, e);
+            FormWorker.Draw();
+        }
+
+        private void widthTextBox_TextChanged(object sender, EventArgs e)
+        {
+            IntTextBoxValidator.ProcessLimit((TextBox)sender, e);
+            FormWorker.Draw();
+        }
+
+        private void mSizeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            IntTextBoxValidator.ProcessLimit((TextBox)sender, e);
+            FormWorker.Draw();
+        }
         #endregion
     }
 }
