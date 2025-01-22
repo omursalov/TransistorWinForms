@@ -58,6 +58,7 @@ namespace TransistorWinForms
             // Установка возможных форматов
             saveFileDialog.Filter = string.Join('|', 
                 Constants.ImageFileExtensions.Select(x => $"{x.Key.ToUpper()} Files (*.{x.Key})|*.{x.Key}"));
+            saveFileDialog.Filter += "|INI Files (*.ini)|*.ini";
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -67,7 +68,7 @@ namespace TransistorWinForms
                 // Обработка расширений
                 if (fileExtension == "ini")
                 {
-                    // Тут еще делать save
+                    
                 }
                 else
                 {

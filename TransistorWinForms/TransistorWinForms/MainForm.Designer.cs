@@ -47,11 +47,15 @@
             colorLineCB = new ComboBox();
             fillColorCB = new ComboBox();
             button1 = new Button();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)mainPictureBox).BeginInit();
             SuspendLayout();
             // 
             // mainPictureBox
             // 
+            mainPictureBox.BorderStyle = BorderStyle.FixedSingle;
             mainPictureBox.Location = new Point(468, 12);
             mainPictureBox.Name = "mainPictureBox";
             mainPictureBox.Size = new Size(795, 600);
@@ -229,11 +233,41 @@
             button1.Text = "Откатить до default";
             button1.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(445, 592);
+            label7.Name = "label7";
+            label7.Size = new Size(17, 20);
+            label7.TabIndex = 22;
+            label7.Text = "0";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(429, 9);
+            label8.Name = "label8";
+            label8.Size = new Size(33, 20);
+            label8.TabIndex = 23;
+            label8.Text = "100";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(1269, 595);
+            label9.Name = "label9";
+            label9.Size = new Size(33, 20);
+            label9.TabIndex = 24;
+            label9.Text = "100";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1275, 624);
+            ClientSize = new Size(1312, 624);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
             Controls.Add(button1);
             Controls.Add(fillColorCB);
             Controls.Add(colorLineCB);
@@ -282,5 +316,8 @@
         public ComboBox colorLineCB;
         public ComboBox fillColorCB;
         public Button button1;
+        private Label label7;
+        private Label label8;
+        private Label label9;
     }
 }
