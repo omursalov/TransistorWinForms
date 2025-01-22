@@ -27,6 +27,8 @@ namespace TransistorWinForms.Workers
 
         public StateModel Get() => stateModel;
 
+        public string GetIni() => File.ReadAllText(Constants.STATE_FILE_NAME);
+
         /// <summary>
         /// Это уже когда на форме что-то меняем,
         /// возможно, можно было лучше сделать, пофиг..

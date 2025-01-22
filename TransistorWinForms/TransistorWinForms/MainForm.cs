@@ -60,9 +60,7 @@ namespace TransistorWinForms
 
                 // Обработка расширений
                 if (fileExtension == "ini")
-                {
-
-                }
+                    File.WriteAllText(saveFileDialog.FileName, StateWorker.GetIni());
                 else
                 {
                     var bmp = FormWorker.GetImage();
