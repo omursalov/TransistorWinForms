@@ -18,5 +18,8 @@
             Text = text;
             SelectionStart = selectionStart;
         }
+
+        public void Set(int selectionStart)
+            => SelectionStart = selectionStart;
     }
 }

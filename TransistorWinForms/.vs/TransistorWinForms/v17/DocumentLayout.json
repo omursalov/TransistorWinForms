@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\workers\\inttextboxvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\models\\textboxstatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\models\\textboxstatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,20 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TextBoxStateModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Models\\TextBoxStateModel.cs",
-              "RelativeDocumentMoniker": "TransistorWinForms\\Models\\TextBoxStateModel.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Models\\TextBoxStateModel.cs",
-              "RelativeToolTip": "TransistorWinForms\\Models\\TextBoxStateModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T21:50:18.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Constants.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Data\\Constants.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\Data\\Constants.cs",
@@ -82,14 +65,14 @@
               "RelativeDocumentMoniker": "TransistorWinForms\\Workers\\IntTextBoxValidator.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Workers\\IntTextBoxValidator.cs",
               "RelativeToolTip": "TransistorWinForms\\Workers\\IntTextBoxValidator.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBAAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAowCEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-22T21:00:17.583Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "State.ini",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Data\\State.ini",
               "RelativeDocumentMoniker": "TransistorWinForms\\Data\\State.ini",
@@ -102,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\MainForm.Designer.cs",
@@ -115,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "FormWorker.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Workers\\FormWorker.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\Workers\\FormWorker.cs",
@@ -128,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\MainForm.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\MainForm.cs",
@@ -141,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\MainForm.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\MainForm.cs",

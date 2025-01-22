@@ -40,6 +40,8 @@ namespace TransistorWinForms.Workers
             if (_processedFlag)
             {
                 _processedFlag = false;
+                if (state.SelectionStart == 0)
+                    state.Set(Constants.IntTextBoxLimits[textBox.Name].ToString().Length);
                 textBox.SelectionStart = state.SelectionStart;
                 return;
             }
