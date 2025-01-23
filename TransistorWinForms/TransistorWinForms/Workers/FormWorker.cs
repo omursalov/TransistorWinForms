@@ -140,6 +140,20 @@ namespace TransistorWinForms.Workers
                 cx * x,
                 -(cy * x) + height + (mSize / lineM) + (mSize / 2));
 
+            // Линия слева
+            graphics.DrawLine(pp,
+                cx * x - mSize / 5,
+                -(cy * x) + height - (mSize / lineM) + (mSize / 2),
+                cx * x - mSize - mSize / 5,
+                -(cy * x) + height - (mSize / lineM) + (mSize / 2));
+
+            // Линия слева (вверх идущая)
+            graphics.DrawLine(pp,
+                cx * x - mSize / 5,
+                -(cy * x) + height - (mSize / lineM) + (mSize / 2) + lineM,
+                cx * x - mSize / 5,
+                -(cy * x) + height - (mSize / lineM) - (mSize / 2) + lineM);
+
             // Нужно круг рисовать?
             if (mainForm.circleCheckBox.Checked)
                 graphics.DrawEllipse(pp, cx * x - mSize, -(cy * x + mSize) + height, mSize * 2, mSize * 2); // Отрисовка круга
