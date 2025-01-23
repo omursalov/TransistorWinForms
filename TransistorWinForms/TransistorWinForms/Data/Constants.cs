@@ -26,6 +26,17 @@ namespace TransistorWinForms.Data
         };
         #endregion
 
+        /// <summary>
+        /// Координаты
+        /// </summary>
+        public static int X_MAX = 100;
+        public static int Y_MAX = 100;
+
+        /// <summary>
+        /// Отношение размера pictureBox к нашим координатам
+        /// </summary>
+        public static int SCALE = 5;
+
         public static IDictionary<string, Color> Colors =
             new Dictionary<string, Color>(StringComparer.OrdinalIgnoreCase)
         {

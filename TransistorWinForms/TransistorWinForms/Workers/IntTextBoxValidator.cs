@@ -11,7 +11,7 @@ namespace TransistorWinForms.Workers
 
         public IntTextBoxValidator(MainForm mainForm)
         {
-            var textBoxes = new List<TextBox> 
+            var textBoxes = new List<TextBox>
             {
                 mainForm.cxTextBox,
                 mainForm.cyTextBox,
@@ -34,6 +34,7 @@ namespace TransistorWinForms.Workers
         /// <summary>
         /// Первый 0 не может быть.
         /// Если вылезли за лимит, - возвращаем назад.
+        /// Если отрицательное число - возвращаем назад.
         /// </summary>
         public void TextChangedCheck(TextBox textBox, EventArgs e)
         {
@@ -55,6 +56,7 @@ namespace TransistorWinForms.Workers
             ;
 
             if (textBox.Text == "0"
+                || textBox.Text.StartsWith("-")
                 || (int.TryParse(textBox.Text, out var value) && value > Constants.IntTextBoxLimits[textBox.Name]))
             {
                 _processedFlag = true;

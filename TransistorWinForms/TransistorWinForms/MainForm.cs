@@ -172,8 +172,8 @@ namespace TransistorWinForms
         {
             if (MouseButtons == MouseButtons.Left)
             {
-                cxTextBox.Text = (e.X / 5).ToString();
-                cyTextBox.Text = (100 - (e.Y / 5)).ToString();
+                cxTextBox.Text = (e.X / Constants.SCALE).ToString();
+                cyTextBox.Text = (Constants.Y_MAX - (e.Y / Constants.SCALE)).ToString();
             }
         }
 

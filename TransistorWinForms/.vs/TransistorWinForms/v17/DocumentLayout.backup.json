@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\transistorwinforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\models\\textboxstatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\models\\textboxstatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\workers\\formworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\workers\\formworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\workers\\drawworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\workers\\drawworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,28 +31,8 @@
       "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\models\\circledrawmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\transistorwinforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\workers\\formworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\workers\\formworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\models\\statemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\models\\statemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\models\\textboxstatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\models\\textboxstatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|c:\\users\\user\\source\\repos\\transistorwinforms\\transistorwinforms\\transistorwinforms\\data\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BDBFD4A-E740-4828-AB51-8F6A1E436A6D}|TransistorWinForms\\TransistorWinForms.csproj|solutionrelative:transistorwinforms\\data\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "StateModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Models\\StateModel.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\Models\\StateModel.cs",
@@ -63,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "TextBoxStateModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Models\\TextBoxStateModel.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\Models\\TextBoxStateModel.cs",
@@ -76,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "FormWorker.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Workers\\FormWorker.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\Workers\\FormWorker.cs",
@@ -89,28 +85,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "DrawWorker.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Workers\\DrawWorker.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\Workers\\DrawWorker.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Workers\\DrawWorker.cs",
               "RelativeToolTip": "TransistorWinForms\\Workers\\DrawWorker.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA6wCYAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAqwHEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T01:47:57.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Constants.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Data\\Constants.cs",
-              "RelativeDocumentMoniker": "TransistorWinForms\\Data\\Constants.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Data\\Constants.cs",
-              "RelativeToolTip": "TransistorWinForms\\Data\\Constants.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAmwBYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T00:00:58.834Z",
               "EditorCaption": ""
             },
             {
@@ -121,27 +104,27 @@
               "RelativeDocumentMoniker": "TransistorWinForms\\MainForm.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\MainForm.cs",
               "RelativeToolTip": "TransistorWinForms\\MainForm.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAQwK8AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAqwDIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-22T22:34:15.187Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\MainForm.Designer.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\MainForm.Designer.cs",
               "RelativeToolTip": "TransistorWinForms\\MainForm.Designer.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAASwEEAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAASwHAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-20T19:59:11.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\MainForm.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\MainForm.cs",
@@ -153,13 +136,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "CircleDrawModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Models\\CircleDrawModel.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\Models\\CircleDrawModel.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Models\\CircleDrawModel.cs",
               "RelativeToolTip": "TransistorWinForms\\Models\\CircleDrawModel.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAArwBoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T02:08:20.479Z",
               "EditorCaption": ""
