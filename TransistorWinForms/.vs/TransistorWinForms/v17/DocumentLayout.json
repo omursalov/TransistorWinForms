@@ -92,9 +92,9 @@
               "Title": "LinesDrawModels.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Models\\LinesDrawModels.cs",
               "RelativeDocumentMoniker": "TransistorWinForms\\Models\\LinesDrawModels.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Models\\LinesDrawModels.cs*",
-              "RelativeToolTip": "TransistorWinForms\\Models\\LinesDrawModels.cs*",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAswEkAAAAzAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Models\\LinesDrawModels.cs",
+              "RelativeToolTip": "TransistorWinForms\\Models\\LinesDrawModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T04:41:37.361Z",
               "EditorCaption": ""
@@ -109,8 +109,7 @@
               "RelativeToolTip": "TransistorWinForms\\Models\\CircleDrawModel.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T04:03:53.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T04:03:53.25Z"
             },
             {
               "$type": "Document",
@@ -121,8 +120,7 @@
               "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Content\\temp.png",
               "RelativeToolTip": "TransistorWinForms\\Content\\temp.png",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-01-23T03:22:40.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T03:22:40.071Z"
             },
             {
               "$type": "Document",
@@ -134,8 +132,7 @@
               "RelativeToolTip": "TransistorWinForms\\Workers\\IntTextBoxValidator.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwBMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T03:00:47.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T03:00:47.08Z"
             },
             {
               "$type": "Document",
@@ -147,8 +144,7 @@
               "RelativeToolTip": "TransistorWinForms\\Workers\\StateWorker.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwBcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T02:51:34.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T02:51:34.991Z"
             },
             {
               "$type": "Document",
@@ -160,8 +156,7 @@
               "RelativeToolTip": "TransistorWinForms\\Workers\\FormWorker.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T01:57:05.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T01:57:05.442Z"
             },
             {
               "$type": "Document",
@@ -173,8 +168,7 @@
               "RelativeToolTip": "TransistorWinForms\\Workers\\DrawWorker.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAgwE0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T01:47:57.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T01:47:57.973Z"
             },
             {
               "$type": "Document",
@@ -186,8 +180,7 @@
               "RelativeToolTip": "TransistorWinForms\\Models\\StateModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T02:08:18.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T02:08:18.104Z"
             },
             {
               "$type": "Document",
@@ -199,8 +192,7 @@
               "RelativeToolTip": "TransistorWinForms\\Models\\TextBoxStateModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T02:08:16.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T02:08:16.649Z"
             },
             {
               "$type": "Document",
@@ -212,8 +204,7 @@
               "RelativeToolTip": "TransistorWinForms\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T03:22:45.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T03:22:45.243Z"
             },
             {
               "$type": "Document",
@@ -225,8 +216,7 @@
               "RelativeToolTip": "TransistorWinForms\\Data\\State.ini",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002768|",
-              "WhenOpened": "2025-01-23T03:22:38.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T03:22:38.164Z"
             },
             {
               "$type": "Document",
@@ -238,8 +228,7 @@
               "RelativeToolTip": "TransistorWinForms\\MainForm.Designer.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAASwHAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T19:59:11.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-20T19:59:11.449Z"
             },
             {
               "$type": "Document",
@@ -250,8 +239,7 @@
               "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "RelativeToolTip": "TransistorWinForms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T14:53:31.255Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+              "WhenOpened": "2025-01-20T14:53:31.255Z"
             }
           ]
         }
