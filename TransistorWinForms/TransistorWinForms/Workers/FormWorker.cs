@@ -9,9 +9,9 @@
         private IDictionary<string, Color> colors = Data.Constants.Colors;
 
         /// <summary>
-        /// IMPORTANT
+        /// Если true, значит все controls уже инициализированы
         /// </summary>
-        private bool initFlag = false;
+        public bool InitFlag { get; private set; }
 
         public FormWorker(MainForm mainForm, StateWorker stateWorker)
         {
@@ -54,7 +54,7 @@
             mainForm.widthTextBox.Text = stateModel.LineWidth.ToString();
             mainForm.mSizeTextBox.Text = stateModel.MSize.ToString();
 
-            initFlag = true;
+            InitFlag = true;
         }
     }
 }

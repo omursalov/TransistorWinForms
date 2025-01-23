@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 using TransistorWinForms.Data;
 
 namespace TransistorWinForms.Workers
@@ -12,7 +6,7 @@ namespace TransistorWinForms.Workers
     public class DrawWorker : IDisposable
     {
         private MainForm mainForm;
-
+        private FormWorker formWorker;
         private StateWorker stateWorker;
 
         private IDictionary<string, Color> colors = Data.Constants.Colors;
@@ -22,18 +16,14 @@ namespace TransistorWinForms.Workers
 
         public IntTextBoxValidator intTextBoxValidator { get; private set; }
 
-        public DrawWorker(MainForm mainForm, IntTextBoxValidator intTextBoxValidator)
+        public DrawWorker(MainForm mainForm, FormWorker formWorker, IntTextBoxValidator intTextBoxValidator)
         {
             this.mainForm = mainForm;
             this.intTextBoxValidator = intTextBoxValidator;
             bitmap = new Bitmap(mainForm.mainPictureBox.Width, mainForm.mainPictureBox.Height);
             graphics = Graphics.FromImage(bitmap);
+            this.formWorker = formWorker;
         }
-
-        /// <summary>
-        /// IMPORTANT
-        /// </summary>
-        private bool initFlag = false;
 
         /// <summary>
         /// Нарисовать картинку.
@@ -43,8 +33,8 @@ namespace TransistorWinForms.Workers
         public void Execute()
         {
             // Надо точно знать, что все инициализировано
-            //if (!initFlag)
-               // return;
+            if (!formWorker.InitFlag)
+               return;
 
             // Проверка textBoxes
             if (!intTextBoxValidator.Validate(mainForm.cxTextBox)

@@ -20,7 +20,7 @@ namespace TransistorWinForms
             StateWorker = new StateWorker(this);
             FormWorker = new FormWorker(this, StateWorker);
             IntTextBoxValidator = new IntTextBoxValidator(this);
-            DrawWorker = new DrawWorker(this, IntTextBoxValidator);
+            DrawWorker = new DrawWorker(this, FormWorker, IntTextBoxValidator);
         }
 
         /// <summary>
