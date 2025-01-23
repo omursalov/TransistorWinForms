@@ -233,6 +233,7 @@
             button1.TabIndex = 21;
             button1.Text = "Откатить до default";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label7
             // 

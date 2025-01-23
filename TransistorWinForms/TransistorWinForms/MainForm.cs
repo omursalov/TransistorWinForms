@@ -1,3 +1,4 @@
+using System.Reflection;
 using TransistorWinForms.Data;
 using TransistorWinForms.Workers;
 
@@ -82,6 +83,15 @@ namespace TransistorWinForms
                 FormWorker.FillControls();
                 FormWorker.Draw();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(Constants.STATE_RESOURCE_NAME);
+            using var reader = new StreamReader(stream);
+            StateWorker.Update(reader.ReadToEnd());
+            FormWorker.FillControls();
+            FormWorker.Draw();
         }
 
         #region Перерисовка
