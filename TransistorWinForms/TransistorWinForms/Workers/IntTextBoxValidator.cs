@@ -9,8 +9,15 @@ namespace TransistorWinForms.Workers
 
         private IList<TextBoxStateModel> _states = new List<TextBoxStateModel>();
 
-        public IntTextBoxValidator(IList<TextBox> textBoxes)
+        public IntTextBoxValidator(MainForm mainForm)
         {
+            var textBoxes = new List<TextBox> 
+            {
+                mainForm.cxTextBox,
+                mainForm.cyTextBox,
+                mainForm.widthTextBox,
+                mainForm.mSizeTextBox
+            };
             foreach (var textBox in textBoxes)
             {
                 var limit = Constants.IntTextBoxLimits[textBox.Name];
@@ -56,5 +63,12 @@ namespace TransistorWinForms.Workers
             else
                 state.Set(textBox.Text, textBox.SelectionStart);
         }
+
+        /// <summary>
+        /// В textBox только цифры, еще и лимиты проверяем
+        /// </summary>
+        public bool Validate(TextBox textBox)
+            => textBox.Text != string.Empty
+                && int.TryParse(textBox.Text, out int value);
     }
 }

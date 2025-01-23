@@ -9,6 +9,7 @@ namespace TransistorWinForms
         public FormWorker FormWorker { get; private set; }
         public StateWorker StateWorker { get; private set; }
         public IntTextBoxValidator IntTextBoxValidator { get; private set; }
+        public DrawWorker DrawWorker { get; private set; }
 
         /// <summary>
         /// Тут получим состояние проги (бывшее или default)
@@ -18,7 +19,8 @@ namespace TransistorWinForms
             InitializeComponent();
             StateWorker = new StateWorker(this);
             FormWorker = new FormWorker(this, StateWorker);
-            IntTextBoxValidator = new IntTextBoxValidator([cxTextBox, cyTextBox, widthTextBox, mSizeTextBox]);
+            IntTextBoxValidator = new IntTextBoxValidator(this);
+            DrawWorker = new DrawWorker(this, IntTextBoxValidator);
         }
 
         /// <summary>
@@ -33,7 +35,7 @@ namespace TransistorWinForms
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-            => FormWorker.Dispose();
+            => DrawWorker.Dispose();
 
         /// <summary>
         /// Вводим в textBoxes только цифры
@@ -63,7 +65,7 @@ namespace TransistorWinForms
                     File.WriteAllText(saveFileDialog.FileName, StateWorker.GetIni());
                 else
                 {
-                    var bmp = FormWorker.GetImage();
+                    var bmp = DrawWorker.GetImage();
                     bmp.Save(saveFileDialog.FileName, Constants.ImageFileExtensions[fileExtension]);
                 }
             }
@@ -81,7 +83,7 @@ namespace TransistorWinForms
                 string fileName = openFileDialog.FileName;
                 StateWorker.Update(File.ReadAllText(fileName));
                 FormWorker.FillControls();
-                FormWorker.Draw();
+                DrawWorker.Execute();
             }
         }
 
@@ -91,66 +93,66 @@ namespace TransistorWinForms
             using var reader = new StreamReader(stream);
             StateWorker.Update(reader.ReadToEnd());
             FormWorker.FillControls();
-            FormWorker.Draw();
+            DrawWorker.Execute();
         }
 
         #region Перерисовка
         private void colorLineCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             StateWorker.Update();
-            FormWorker.Draw();
+            DrawWorker.Execute();
         }
 
         private void fillColorCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             StateWorker.Update();
-            FormWorker.Draw();
+            DrawWorker.Execute();
         }
 
         private void transitionType1_CheckedChanged(object sender, EventArgs e)
         {
             StateWorker.Update();
-            FormWorker.Draw();
+            DrawWorker.Execute();
         }
 
         private void transitionType2_CheckedChanged(object sender, EventArgs e)
         {
             StateWorker.Update();
-            FormWorker.Draw();
+            DrawWorker.Execute();
         }
 
         private void circleCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             StateWorker.Update();
-            FormWorker.Draw();
+            DrawWorker.Execute();
         }
 
         private void cxTextBox_TextChanged(object sender, EventArgs e)
         {
             IntTextBoxValidator.TextChangedCheck((TextBox)sender, e);
             StateWorker.Update();
-            FormWorker.Draw();
+            DrawWorker.Execute();
         }
 
         private void cyTextBox_TextChanged(object sender, EventArgs e)
         {
             IntTextBoxValidator.TextChangedCheck((TextBox)sender, e);
             StateWorker.Update();
-            FormWorker.Draw();
+            DrawWorker.Execute();
         }
 
         private void widthTextBox_TextChanged(object sender, EventArgs e)
         {
             IntTextBoxValidator.TextChangedCheck((TextBox)sender, e);
             StateWorker.Update();
-            FormWorker.Draw();
+            DrawWorker.Execute();
         }
 
         private void mSizeTextBox_TextChanged(object sender, EventArgs e)
         {
             IntTextBoxValidator.TextChangedCheck((TextBox)sender, e);
             StateWorker.Update();
-            FormWorker.Draw();
+            DrawWorker.Execute();
         }
         #endregion
 
@@ -158,7 +160,7 @@ namespace TransistorWinForms
         /// Переопределяем OnPain, чтобы лучше контролировать отрисовку
         /// </summary>
         protected override void OnPaint(PaintEventArgs e)
-            => FormWorker.Draw();
+            => DrawWorker.Execute();
 
         public string GetTransitionType()
             => transitionType1.Checked ? "n-канальный"
