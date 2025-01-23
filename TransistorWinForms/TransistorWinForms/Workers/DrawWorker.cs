@@ -52,8 +52,6 @@ namespace TransistorWinForms.Workers
                 return;
             }
 
-            var x = 5; // 5 к 1 (500x500 pictureBox)
-
             var width = mainForm.mainPictureBox.Width;
             var height = mainForm.mainPictureBox.Height;
 
