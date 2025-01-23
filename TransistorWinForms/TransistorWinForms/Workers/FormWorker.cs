@@ -80,7 +80,9 @@ namespace TransistorWinForms.Workers
                 = new Bitmap(Assembly.GetExecutingAssembly().GetManifestResourceStream(Constants.TEMP_DRAW_RESOURCE_NAME));
 
         /// <summary>
-        /// Нарисовать картинку
+        /// Нарисовать картинку.
+        /// Данный метод можно отрефачить + математику поправить,
+        /// но это не для меня..
         /// </summary>
         public void Draw()
         {
@@ -98,15 +100,16 @@ namespace TransistorWinForms.Workers
                 return;
             }
 
-            int M = int.Parse(mainForm.cxTextBox.Text); // Рекомендуемое значение М=70 для вписывания
+            var x = 5; // 5 к 1 (500x500 pictureBox)
 
-            // Точка центра, от которой идет масштабирование 256 и 244
-            int Cx = 256;
-            int Cy = 244;
+            var width = mainForm.mainPictureBox.Width;
+            var height = mainForm.mainPictureBox.Height;
 
+            var cx = int.Parse(mainForm.cxTextBox.Text);
+            var cy = int.Parse(mainForm.cyTextBox.Text);
+            var mSize = int.Parse(mainForm.mSizeTextBox.Text); // Масштаб
+            
             // Цвет заливки
-            // graphics = mainForm.mainPictureBox.CreateGraphics();
-
             var fillColorText = mainForm.fillColorCB.Text;
             graphics.Clear(colors[fillColorText]);
 
@@ -114,28 +117,19 @@ namespace TransistorWinForms.Workers
             var colorLineText = mainForm.colorLineCB.Text;
             var pp = new Pen(colors[colorLineText], int.Parse(mainForm.widthTextBox.Text));
 
-            //Отрисовка первого транзистора
-            graphics.DrawLine(pp, 326, 314, 356, 314); // Центральная линия стрелки
+            // Штрихи в центре круга
+            graphics.DrawLine(pp, cx * x, -(cy * x) - mSize / mSize + height - 40, cx * x, -(cy * x) + mSize / mSize + height - 40); // Штрих верхний
+            graphics.DrawLine(pp, cx * x, -(cy * x) - mSize / mSize + height, cx * x, -(cy * x) + mSize / mSize + height); // Штрих центральный
+            graphics.DrawLine(pp, cx * x, -(cy * x) - mSize / mSize + height + 40, cx * x, -(cy * x) + mSize / mSize + height + 40); // Штрих нижний
 
-            // Тут еще разбираться.. Стрелка поворот ее
-            if (mainForm.transitionType1.Checked)
-            {
-                graphics.DrawLine(pp, 326, 314, 326 + (M / 4), 301 + (M / 4)); // Наклонная вверх стрелка
-                graphics.DrawLine(pp, 326, 314, 326 + (M / 4), 327 - (M / 4)); // Наклонная вниз стрелка
-            }
-
-            graphics.DrawLine(pp, 356, 314, 356, 355); // Вертикальная правая линия
-            graphics.DrawLine(pp, 326, 355, 400, 355); // Верхняя линия
-            graphics.DrawLine(pp, 326, 273, 400, 273); // Нижняя линия
-            graphics.DrawLine(pp, 310, 355, 250, 355); // Нижняя левая линия
-            graphics.DrawLine(pp, 310, 273, 310, 355); // Вертикальная левая лииния
-            graphics.DrawLine(pp, 326, 324, 326, 304); // Штрих центральный
-            graphics.DrawLine(pp, 326, 283, 326, 263); // Штрих верхний
-            graphics.DrawLine(pp, 326, 365, 326, 345); // Штрих нижний
+            // Линия слева
+            graphics.DrawLine(pp, cx * x - 150, -(cy * x) - mSize / mSize + height + 50, cx * x - 20, -(cy * x) - mSize / mSize + height + 50);
+            // Линия слева, которая идет наверх
+            graphics.DrawLine(pp, cx * x - 20, -(cy * x) - mSize / mSize + height + 50, cx * x - 20, -(cy * x) - mSize / mSize + height - 30);
 
             // Нужно круг рисовать?
             if (mainForm.circleCheckBox.Checked)
-                graphics.DrawEllipse(pp, 256, 244, M * 2, M * 2); // Отрисовка круга*/
+                graphics.DrawEllipse(pp, cx * x - mSize, -(cy * x + mSize) + height, mSize * 2, mSize * 2); // Отрисовка круга
 
             mainForm.mainPictureBox.Image = bitmap;
         }

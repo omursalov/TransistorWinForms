@@ -50,6 +50,8 @@
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
             ((System.ComponentModel.ISupportInitialize)mainPictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -58,7 +60,7 @@
             mainPictureBox.BorderStyle = BorderStyle.FixedSingle;
             mainPictureBox.Location = new Point(468, 12);
             mainPictureBox.Name = "mainPictureBox";
-            mainPictureBox.Size = new Size(795, 600);
+            mainPictureBox.Size = new Size(500, 500);
             mainPictureBox.TabIndex = 0;
             mainPictureBox.TabStop = false;
             // 
@@ -238,7 +240,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(445, 592);
+            label7.Location = new Point(468, 515);
             label7.Name = "label7";
             label7.Size = new Size(17, 20);
             label7.TabIndex = 22;
@@ -256,17 +258,37 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(1269, 595);
+            label9.Location = new Point(935, 515);
             label9.Name = "label9";
             label9.Size = new Size(33, 20);
             label9.TabIndex = 24;
             label9.Text = "100";
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(217, 68);
+            label10.Name = "label10";
+            label10.Size = new Size(23, 20);
+            label10.TabIndex = 25;
+            label10.Text = "cx";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(319, 68);
+            label11.Name = "label11";
+            label11.Size = new Size(23, 20);
+            label11.TabIndex = 26;
+            label11.Text = "cy";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1312, 624);
+            ClientSize = new Size(988, 545);
+            Controls.Add(label11);
+            Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -321,5 +343,7 @@
         private Label label7;
         private Label label8;
         private Label label9;
+        public Label label10;
+        public Label label11;
     }
 }

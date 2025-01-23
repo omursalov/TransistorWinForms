@@ -9,8 +9,8 @@ namespace TransistorWinForms.Data
         public static string FillColor = "белый";
         public static string TransitionType = "p-канальный";
         public static bool Circle = true;
-        public static int Cx = 100;
-        public static int Cy = 100;
+        public static int Cx = 50;
+        public static int Cy = 50;
         public static int LineWidth = 3;
         public static int MSize = 100;
         #endregion
