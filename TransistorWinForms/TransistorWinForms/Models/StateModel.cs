@@ -21,7 +21,7 @@ namespace TransistorWinForms.Models
         /// </summary>
         public StateModel(string value)
         {
-            var items = value.Split(Environment.NewLine);
+            var items = value.Split('\n');
 
             if (items.All(x => x.StartsWith(";")))
             {
