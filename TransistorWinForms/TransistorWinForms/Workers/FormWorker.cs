@@ -107,7 +107,7 @@ namespace TransistorWinForms.Workers
 
             var cx = int.Parse(mainForm.cxTextBox.Text);
             var cy = int.Parse(mainForm.cyTextBox.Text);
-            var mSize = int.Parse(mainForm.mSizeTextBox.Text); // Масштаб
+            var mSize = int.Parse(mainForm.mSizeTextBox.Text); // Масштаб (по умолчанию = 100)
             
             // Цвет заливки
             var fillColorText = mainForm.fillColorCB.Text;
@@ -117,15 +117,28 @@ namespace TransistorWinForms.Workers
             var colorLineText = mainForm.colorLineCB.Text;
             var pp = new Pen(colors[colorLineText], int.Parse(mainForm.widthTextBox.Text));
 
-            // Штрихи в центре круга
-            graphics.DrawLine(pp, cx * x, -(cy * x) - mSize / mSize + height - 40, cx * x, -(cy * x) + mSize / mSize + height - 40); // Штрих верхний
-            graphics.DrawLine(pp, cx * x, -(cy * x) - mSize / mSize + height, cx * x, -(cy * x) + mSize / mSize + height); // Штрих центральный
-            graphics.DrawLine(pp, cx * x, -(cy * x) - mSize / mSize + height + 40, cx * x, -(cy * x) + mSize / mSize + height + 40); // Штрих нижний
+            var lineM = 10;
 
-            // Линия слева
-            graphics.DrawLine(pp, cx * x - 150, -(cy * x) - mSize / mSize + height + 50, cx * x - 20, -(cy * x) - mSize / mSize + height + 50);
-            // Линия слева, которая идет наверх
-            graphics.DrawLine(pp, cx * x - 20, -(cy * x) - mSize / mSize + height + 50, cx * x - 20, -(cy * x) - mSize / mSize + height - 30);
+            // Штрих сверху
+            graphics.DrawLine(pp, 
+                cx * x, 
+                -(cy * x) + height - (mSize / lineM) - (mSize / 2), 
+                cx * x, 
+                -(cy * x) + height + (mSize / lineM) - (mSize / 2));
+
+            // Штрих центральный
+            graphics.DrawLine(pp, 
+                cx * x, 
+                -(cy * x) + height - (mSize / lineM), 
+                cx * x, 
+                -(cy * x) + height + (mSize / lineM));
+
+            // Штрих снизу
+            graphics.DrawLine(pp,
+                cx * x,
+                -(cy * x) + height - (mSize / lineM) + (mSize / 2),
+                cx * x,
+                -(cy * x) + height + (mSize / lineM) + (mSize / 2));
 
             // Нужно круг рисовать?
             if (mainForm.circleCheckBox.Checked)
