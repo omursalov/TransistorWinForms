@@ -46,7 +46,7 @@
             iniLoadBtn = new Button();
             colorLineCB = new ComboBox();
             fillColorCB = new ComboBox();
-            button1 = new Button();
+            setDefaultBtn = new Button();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
@@ -63,6 +63,7 @@
             mainPictureBox.Size = new Size(500, 500);
             mainPictureBox.TabIndex = 0;
             mainPictureBox.TabStop = false;
+            mainPictureBox.MouseMove += MainPictureBox_MouseMove;
             // 
             // label1
             // 
@@ -227,15 +228,15 @@
             fillColorCB.TabIndex = 20;
             fillColorCB.SelectedIndexChanged += fillColorCB_SelectedIndexChanged;
             // 
-            // button1
+            // setDefaultBtn
             // 
-            button1.Location = new Point(12, 387);
-            button1.Name = "button1";
-            button1.Size = new Size(282, 32);
-            button1.TabIndex = 21;
-            button1.Text = "Откатить до default";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            setDefaultBtn.Location = new Point(12, 387);
+            setDefaultBtn.Name = "setDefaultBtn";
+            setDefaultBtn.Size = new Size(282, 32);
+            setDefaultBtn.TabIndex = 21;
+            setDefaultBtn.Text = "Откатить до default";
+            setDefaultBtn.UseVisualStyleBackColor = true;
+            setDefaultBtn.Click += setDefaultBtn_Click;
             // 
             // label7
             // 
@@ -292,7 +293,7 @@
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(button1);
+            Controls.Add(setDefaultBtn);
             Controls.Add(fillColorCB);
             Controls.Add(colorLineCB);
             Controls.Add(iniLoadBtn);
@@ -339,7 +340,7 @@
         public Button iniLoadBtn;
         public ComboBox colorLineCB;
         public ComboBox fillColorCB;
-        public Button button1;
+        public Button setDefaultBtn;
         private Label label7;
         private Label label8;
         private Label label9;

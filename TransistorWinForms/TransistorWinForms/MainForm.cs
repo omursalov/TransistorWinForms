@@ -87,7 +87,10 @@ namespace TransistorWinForms
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Откатить до default values
+        /// </summary>
+        private void setDefaultBtn_Click(object sender, EventArgs e)
         {
             using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(Constants.STATE_RESOURCE_NAME);
             using var reader = new StreamReader(stream);
@@ -161,6 +164,18 @@ namespace TransistorWinForms
         /// </summary>
         protected override void OnPaint(PaintEventArgs e)
             => DrawWorker.Execute();
+
+        /// <summary>
+        /// Двигаем мышкой по pictureBox'у
+        /// </summary>
+        private void MainPictureBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (MouseButtons == MouseButtons.Left)
+            {
+                cxTextBox.Text = (e.X / 5).ToString();
+                cyTextBox.Text = ((e.Y) / 5).ToString();
+            }
+        }
 
         public string GetTransitionType()
             => transitionType1.Checked ? "n-канальный"
