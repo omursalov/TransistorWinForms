@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TransistorWinForms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3285858bb4fefdddf8ffc3d90469156ce19c6b02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ed6cf49da4f4c374ad7be6b0be1a78bfbe7582f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TransistorWinForms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TransistorWinForms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

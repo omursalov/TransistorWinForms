@@ -106,33 +106,38 @@ namespace TransistorWinForms.Models
             float arrowLength = shortLineLength * 0.7f; // Длина стрелок (70% от длины линии)
             float arrowAngle = 10 * (float)Math.PI / 180; // Угол наклона стрелок (45 градусов)
 
-            // Левая стрелка (наклон вверх)
-            X1 = cx * Constants.SCALE; // Начало стрелки (левая часть линии)
-            Y1 = -(cy * Constants.SCALE) + height; // Начало стрелки (на уровне среднего штриха)
-            X2 = X1 + arrowLength * (float)Math.Cos(arrowAngle); // Конец стрелки (наклон вверх)
-            Y2 = Y1 - arrowLength * (float)Math.Sin(arrowAngle); // Конец стрелки (наклон вверх)
-            graphics.DrawLine(pen, X1, Y1, X2, Y2);
+            if (mainForm.transitionType1.Checked)
+            {
+                // Левая стрелка (наклон вверх)
+                X1 = cx * Constants.SCALE; // Начало стрелки (левая часть линии)
+                Y1 = -(cy * Constants.SCALE) + height; // Начало стрелки (на уровне среднего штриха)
+                X2 = X1 + arrowLength * (float)Math.Cos(arrowAngle); // Конец стрелки (наклон вверх)
+                Y2 = Y1 - arrowLength * (float)Math.Sin(arrowAngle); // Конец стрелки (наклон вверх)
+                graphics.DrawLine(pen, X1, Y1, X2, Y2);
 
-            // Правая стрелка (наклон вниз)
-            X1 = cx * Constants.SCALE; // Начало стрелки (левая часть линии)
-            Y1 = -(cy * Constants.SCALE) + height; // Начало стрелки (на уровне среднего штриха)
-            X2 = X1 + arrowLength * (float)Math.Cos(arrowAngle); // Конец стрелки (наклон вниз)
-            Y2 = Y1 + arrowLength * (float)Math.Sin(arrowAngle); // Конец стрелки (наклон вниз)
-            graphics.DrawLine(pen, X1, Y1, X2, Y2);
+                // Правая стрелка (наклон вниз)
+                X1 = cx * Constants.SCALE; // Начало стрелки (левая часть линии)
+                Y1 = -(cy * Constants.SCALE) + height; // Начало стрелки (на уровне среднего штриха)
+                X2 = X1 + arrowLength * (float)Math.Cos(arrowAngle); // Конец стрелки (наклон вниз)
+                Y2 = Y1 + arrowLength * (float)Math.Sin(arrowAngle); // Конец стрелки (наклон вниз)
+                graphics.DrawLine(pen, X1, Y1, X2, Y2);
+            }
+            else if (mainForm.transitionType2.Checked)
+            {
+                // Зеркальная стрелка (начинается из правой части линии)
+                X1 = cx * Constants.SCALE + shortLineLength; // Начало стрелки (правая часть линии)
+                Y1 = -(cy * Constants.SCALE) + height; // Начало стрелки (на уровне среднего штриха)
+                X2 = X1 - arrowLength * (float)Math.Cos(arrowAngle); // Конец стрелки (наклон вверх)
+                Y2 = Y1 - arrowLength * (float)Math.Sin(arrowAngle); // Конец стрелки (наклон вверх)
+                graphics.DrawLine(pen, X1, Y1, X2, Y2);
 
-            // Зеркальная стрелка (начинается из правой части линии)
-            X1 = cx * Constants.SCALE + shortLineLength; // Начало стрелки (правая часть линии)
-            Y1 = -(cy * Constants.SCALE) + height; // Начало стрелки (на уровне среднего штриха)
-            X2 = X1 - arrowLength * (float)Math.Cos(arrowAngle); // Конец стрелки (наклон вверх)
-            Y2 = Y1 - arrowLength * (float)Math.Sin(arrowAngle); // Конец стрелки (наклон вверх)
-            graphics.DrawLine(pen, X1, Y1, X2, Y2);
-
-            // Зеркальная стрелка (наклон вниз)
-            X1 = cx * Constants.SCALE + shortLineLength; // Начало стрелки (правая часть линии)
-            Y1 = -(cy * Constants.SCALE) + height; // Начало стрелки (на уровне среднего штриха)
-            X2 = X1 - arrowLength * (float)Math.Cos(arrowAngle); // Конец стрелки (наклон вниз)
-            Y2 = Y1 + arrowLength * (float)Math.Sin(arrowAngle); // Конец стрелки (наклон вниз)
-            graphics.DrawLine(pen, X1, Y1, X2, Y2);
+                // Зеркальная стрелка (наклон вниз)
+                X1 = cx * Constants.SCALE + shortLineLength; // Начало стрелки (правая часть линии)
+                Y1 = -(cy * Constants.SCALE) + height; // Начало стрелки (на уровне среднего штриха)
+                X2 = X1 - arrowLength * (float)Math.Cos(arrowAngle); // Конец стрелки (наклон вниз)
+                Y2 = Y1 + arrowLength * (float)Math.Sin(arrowAngle); // Конец стрелки (наклон вниз)
+                graphics.DrawLine(pen, X1, Y1, X2, Y2);
+            }
         }
     }
 }

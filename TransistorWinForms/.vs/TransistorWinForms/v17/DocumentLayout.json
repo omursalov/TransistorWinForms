@@ -94,7 +94,7 @@
               "RelativeDocumentMoniker": "TransistorWinForms\\Models\\LinesDrawModels.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\TransistorWinForms\\TransistorWinForms\\TransistorWinForms\\Models\\LinesDrawModels.cs",
               "RelativeToolTip": "TransistorWinForms\\Models\\LinesDrawModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T04:41:37.361Z",
               "EditorCaption": ""
@@ -144,7 +144,8 @@
               "RelativeToolTip": "TransistorWinForms\\Workers\\StateWorker.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwBcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T02:51:34.991Z"
+              "WhenOpened": "2025-01-23T02:51:34.991Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -156,7 +157,8 @@
               "RelativeToolTip": "TransistorWinForms\\Workers\\FormWorker.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T01:57:05.442Z"
+              "WhenOpened": "2025-01-23T01:57:05.442Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
