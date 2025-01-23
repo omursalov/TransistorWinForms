@@ -33,7 +33,8 @@ namespace TransistorWinForms.Data
         public static int Y_MAX = 100;
 
         /// <summary>
-        /// Отношение размера pictureBox к нашим координатам
+        /// Отношение размера pictureBox к нашим координатам.
+        /// Ну захардкодили, ничего страшного..
         /// </summary>
         public static int SCALE = 5;
 
