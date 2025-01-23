@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using TransistorWinForms.Data;
+using TransistorWinForms.Models;
 
 namespace TransistorWinForms.Workers
 {
@@ -16,6 +17,10 @@ namespace TransistorWinForms.Workers
 
         public IntTextBoxValidator intTextBoxValidator { get; private set; }
 
+        #region Фигуры рисунка
+        private CircleDrawModel circleDrawModel;
+        #endregion
+
         public DrawWorker(MainForm mainForm, FormWorker formWorker, IntTextBoxValidator intTextBoxValidator)
         {
             this.mainForm = mainForm;
@@ -23,6 +28,7 @@ namespace TransistorWinForms.Workers
             bitmap = new Bitmap(mainForm.mainPictureBox.Width, mainForm.mainPictureBox.Height);
             graphics = Graphics.FromImage(bitmap);
             this.formWorker = formWorker;
+            circleDrawModel = new CircleDrawModel(mainForm);
         }
 
         /// <summary>
@@ -61,7 +67,7 @@ namespace TransistorWinForms.Workers
 
             // Ручка: цвет и толщина
             var colorLineText = mainForm.colorLineCB.Text;
-            var pp = new Pen(colors[colorLineText], int.Parse(mainForm.widthTextBox.Text));
+            var pen = new Pen(colors[colorLineText], int.Parse(mainForm.widthTextBox.Text));
 
             var lineM = 10;
 
@@ -102,7 +108,7 @@ namespace TransistorWinForms.Workers
 
             // Нужно круг рисовать?
             if (mainForm.circleCheckBox.Checked)
-                graphics.DrawEllipse(pp, cx * x - mSize, -(cy * x + mSize) + height, mSize * 2, mSize * 2); // Отрисовка круга
+                circleDrawModel.Execute(graphics, pen); // Отрисовка круга
 
             mainForm.mainPictureBox.Image = bitmap;
         }

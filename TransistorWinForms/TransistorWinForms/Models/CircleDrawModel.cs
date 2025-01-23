@@ -14,5 +14,26 @@
         /// </summary>
         public int Width { get; set; }
         public int Height { get; set; }
+
+        private MainForm mainForm;
+
+        public CircleDrawModel(MainForm mainForm)
+        {
+            this.mainForm = mainForm;
+        }
+
+        public void Execute(Graphics graphics, Pen pen)
+        {
+            var x = 5;
+            var cx = int.Parse(mainForm.cxTextBox.Text);
+            var cy = int.Parse(mainForm.cyTextBox.Text);
+            var mSize = int.Parse(mainForm.mSizeTextBox.Text);
+            var height = mainForm.mainPictureBox.Height;
+            X = cx * x - mSize;
+            Y = -(cy * x + mSize) + height;
+            Width = mSize * 2;
+            Height = mSize * 2;
+            graphics.DrawEllipse(pen, X, Y, Width, Height);
+        }
     }
 }
