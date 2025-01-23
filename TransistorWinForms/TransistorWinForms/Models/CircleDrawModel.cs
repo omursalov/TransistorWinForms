@@ -20,9 +20,7 @@ namespace TransistorWinForms.Models
         private MainForm mainForm;
 
         public CircleDrawModel(MainForm mainForm)
-        {
-            this.mainForm = mainForm;
-        }
+            => this.mainForm = mainForm;
 
         public void Execute(Graphics graphics, Pen pen)
         {

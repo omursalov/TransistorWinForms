@@ -4,6 +4,10 @@ using TransistorWinForms.Models;
 
 namespace TransistorWinForms.Workers
 {
+    /// <summary>
+    /// Класс, который допиливал наскоряке.
+    /// Если зашарить за математику, можно сделать лучше.
+    /// </summary>
     public class DrawWorker : IDisposable
     {
         private MainForm mainForm;
@@ -19,6 +23,7 @@ namespace TransistorWinForms.Workers
 
         #region Фигуры рисунка
         private CircleDrawModel circleDrawModel;
+        private LinesDrawModels lineDrawModels;
         #endregion
 
         public DrawWorker(MainForm mainForm, FormWorker formWorker, IntTextBoxValidator intTextBoxValidator)
@@ -29,6 +34,7 @@ namespace TransistorWinForms.Workers
             graphics = Graphics.FromImage(bitmap);
             this.formWorker = formWorker;
             circleDrawModel = new CircleDrawModel(mainForm);
+            lineDrawModels = new LinesDrawModels(mainForm);
         }
 
         /// <summary>
@@ -57,7 +63,7 @@ namespace TransistorWinForms.Workers
 
             var cx = int.Parse(mainForm.cxTextBox.Text);
             var cy = int.Parse(mainForm.cyTextBox.Text);
-            var mSize = int.Parse(mainForm.mSizeTextBox.Text); // Масштаб (по умолчанию = 100)
+            var mSize = int.Parse(mainForm.mSizeTextBox.Text); // Масштаб
 
             // Цвет заливки
             var fillColorText = mainForm.fillColorCB.Text;
@@ -67,42 +73,9 @@ namespace TransistorWinForms.Workers
             var colorLineText = mainForm.colorLineCB.Text;
             var pen = new Pen(colors[colorLineText], int.Parse(mainForm.widthTextBox.Text));
 
-            var lineM = 10;
-
-            // Штрих сверху
-            /*graphics.DrawLine(pp, 
-                cx * x, 
-                -(cy * x) + height - (mSize / lineM) - (mSize / 2), 
-                cx * x, 
-                -(cy * x) + height + (mSize / lineM) - (mSize / 2));
-
-            // Штрих центральный
-            graphics.DrawLine(pp, 
-                cx * x, 
-                -(cy * x) + height - (mSize / lineM), 
-                cx * x, 
-                -(cy * x) + height + (mSize / lineM));
-
-            // Штрих снизу
-            graphics.DrawLine(pp,
-                cx * x,
-                -(cy * x) + height - (mSize / lineM) + (mSize / 2),
-                cx * x,
-                -(cy * x) + height + (mSize / lineM) + (mSize / 2));
-
-            // Линия слева
-            graphics.DrawLine(pp,
-                cx * x - mSize / 5,
-                -(cy * x) + height - (mSize / lineM) + (mSize / 2),
-                cx * x - mSize - mSize / 5,
-                -(cy * x) + height - (mSize / lineM) + (mSize / 2));
-
-            // Линия слева (вверх идущая)
-            graphics.DrawLine(pp,
-                cx * x - mSize / 5,
-                -(cy * x) + height - (mSize / lineM) + (mSize / 2) + lineM,
-                cx * x - mSize / 5,
-                -(cy * x) + height - (mSize / lineM) - (mSize / 2) + lineM);*/
+            // Отрисовка всех линий..
+            // Вероятно, ужасный код..
+            lineDrawModels.Execute(graphics, pen);
 
             // Нужно круг рисовать?
             if (mainForm.circleCheckBox.Checked)
